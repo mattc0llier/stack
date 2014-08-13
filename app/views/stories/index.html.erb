@@ -1,0 +1,24 @@
+<% @stories.each do |story| %>	
+
+	<div class="story">
+
+		<h2><%= link_to story.title, story.url %></h2>
+
+		<p><%= story.description %></p>
+
+		<ul>
+			<li><%= link_to "Upvote", story_votes_path(story), method: :post %> </li>
+			<li> <%= pluralize(story.votes.size, "upvote") %></li>
+
+			<li>
+				<%= link_to pluralize(story.comments.size, "comment"), story_path(story) %>
+			</li>
+			
+			<li> 
+				<%= time_ago_in_words story.created_at %> ago
+			</li>
+		</ul>
+
+	</div>
+
+<% end %>

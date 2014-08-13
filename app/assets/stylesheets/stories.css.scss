@@ -1,0 +1,21 @@
+// Place all the styles related to the stories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	font-family: "Helvetica Neue", "Arial", sans-serif;
+	width: 720px;
+	margin: auto;
+	color: #333
+}
+
+a, a:hover, a:visited, a:focus {
+	color: #333
+}
+
+div.success {
+	color: green;
+}
+
+div.error {
+	color: red
+}
